@@ -36,7 +36,7 @@ export default function App() {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        await axios.get("http://127.0.0.1:8000/health");
+        await axios.get("https://aurabot-ecom15.vercel.app/health");
         setIsOnline(true);
       } catch {
         setIsOnline(false);
@@ -56,7 +56,7 @@ export default function App() {
     if (!overrideText) setInput("");
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/chat", { message: text });
+      const res = await axios.post("https://aurabot-ecom15.vercel.app/", { message: text });
       setMessages([...newMsgs, { sender: "bot", text: res.data.message, products: res.data.products }]);
     } catch {
       setMessages([...newMsgs, { sender: "bot", text: "Something went wrong. Please try again." }]);
