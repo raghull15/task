@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from models import ChatRequest
 from search import search_products
 
-app = FastAPI(title="Eco Force API", version="1.0.0")
+app = FastAPI(title="Aura.com", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,7 +15,7 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return {"status": "Eco Force API running"}
+    return {"status": "Aura.com API running"}
 
 @app.get("/health")
 def health():
