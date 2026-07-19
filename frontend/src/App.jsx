@@ -3,7 +3,7 @@ import axios from "axios";
 import Message from "./components/message";
 import "./App.css";
 
-const API_URL = import.meta.env.VITE_API_URL;
+// const API_URL = import.meta.env.VITE_API_URL;
 const SHOWCASE = [
   { name: "Sony WH-1000XM5", cat: "Headphones", price: "₹2,990", img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=400&q=80" },
   { name: "Apple AirPods Pro 2", cat: "Earbuds", price: "₹2,499", img: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&q=80" },
@@ -37,11 +37,10 @@ export default function App() {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        await axios.get(`${API_URL}/health`); 
+        await axios.get("http://127.0.0.1:8000/health");
         setIsOnline(true);
       } catch {
         setIsOnline(false);
-  
       }
     };
 
@@ -58,7 +57,7 @@ export default function App() {
     if (!overrideText) setInput("");
     setLoading(true);
     try {
-      const res = await axios.post(`${API_URL}/chat`, { message: text });
+      const res = await axios.post("http://127.0.0.1:8000/chat", { message: text });
       setMessages([...newMsgs, { sender: "bot", text: res.data.message, products: res.data.products }]);
     } catch {
       setMessages([...newMsgs, { sender: "bot", text: "Something went wrong. Please try again." }]);
@@ -128,7 +127,7 @@ export default function App() {
               <h3>Welcome!</h3>
               <p>I'm your shopping assistant. How can I help?</p>
             </div>
-
+            
             <div className="quick-actions-row">
               {ACTIONS.map((a, i) => (
                 <button key={i} className="qa-btn" onClick={() => send(a.query)}>
@@ -140,7 +139,7 @@ export default function App() {
             <div className="popular-searches-box">
               <div className="ps-header">
                 <svg viewBox="0 0 24 24" fill="none" className="ps-icon">
-                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 Popular searches
               </div>
