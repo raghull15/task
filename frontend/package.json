@@ -1,6 +1,7 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "frontend",
-  "private": true,
+  "private": true,  
   "version": "0.0.0",
   "type": "module",
   "scripts": {
