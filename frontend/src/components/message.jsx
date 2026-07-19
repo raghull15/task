@@ -1,4 +1,4 @@
-import ProductCards from "./ProductCards";
+import ProductCards from "./productcards";
 
 function formatText(text) {
   if (!text) return null;

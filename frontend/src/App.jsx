@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import Message from "./components/Message";
+import Message from "./components/message";
 import "./App.css";
 
 const API_URL = import.meta.env.VITE_API_URL;
