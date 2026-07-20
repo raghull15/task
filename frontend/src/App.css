@@ -919,7 +919,8 @@ html[data-theme="light"] .chat-panel {
   overflow: visible;
   position: relative;
   z-index: 10;
-  padding: 12px 16px 16px;
+  padding: 14px 16px 20px;
+  gap: 8px;
 }
 
 .chat-input {
@@ -1069,6 +1070,8 @@ html[data-theme="light"] .chat-panel {
     flex-shrink: 0;
     max-height: none;
     overflow: visible;
+    padding: 12px 12px 24px !important;
+    gap: 10px;
   }
 
   .fab-wrap {
@@ -1121,7 +1124,8 @@ html[data-theme="light"] .chat-panel {
 
   .chat-disclaimer {
     font-size: 9px;
-    padding-top: 6px;
+    padding-top: 4px;
+    margin-bottom: 8px;
   }
 }
 
@@ -1133,6 +1137,11 @@ html[data-theme="light"] .chat-panel {
 
   .showcase {
     padding: 0 12px 12px;
+  }
+
+  .chat-input-wrap {
+    padding: 10px 10px 20px !important;
+    gap: 8px;
   }
 
   .chat-input {
