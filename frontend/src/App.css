@@ -914,6 +914,8 @@ html[data-theme="light"] .chat-panel {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  max-height: 120px;
+  overflow-y: auto;
 }
 
 .chat-input {
@@ -1052,5 +1054,79 @@ html[data-theme="light"] .chat-panel {
 
   .hero {
     padding: 36px 16px 28px;
+  }
+
+  .chat-input {
+    padding: 8px 8px 4px 8px;
+    gap: 6px;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 8px;
+  }
+
+  .send-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .send-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .chat-disclaimer {
+    font-size: 9px;
+    padding-bottom: 6px;
+  }
+}
+
+@media(max-width:360px) {
+  .chat-input {
+    padding: 6px 6px 3px 6px;
+    gap: 4px;
+  }
+
+  .chat-input input {
+    font-size: 13px;
+    padding: 8px 8px;
+    min-height: 36px;
+  }
+
+  .send-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+  }
+
+  .send-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .navbar {
+    height: 50px;
+    padding: 0 12px;
+  }
+
+  .nav-brand {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .theme-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(20px, 4vw, 28px);
+  }
+
+  .hero p {
+    font-size: 13px;
   }
 }
