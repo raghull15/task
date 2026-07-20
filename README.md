@@ -1,5 +1,5 @@
-<img width="1365" height="599" alt="Image" src="https://github.com/user-attachments/assets/d6e0e6da-1ae0-4c71-bc3c-db9bcdfaf053" />
 <img width="1365" height="598" alt="Image" src="https://github.com/user-attachments/assets/5c87e116-a6e7-490f-bea2-d296201036e5" />
+<img width="1365" height="599" alt="Image" src="https://github.com/user-attachments/assets/d6e0e6da-1ae0-4c71-bc3c-db9bcdfaf053" />
 # Aura.com — AI Product Shopping Assistant
 
 Aura.com is a full-stack AI-powered shopping assistant that helps users search, discover, and compare products through a conversational interface.
