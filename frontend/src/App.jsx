@@ -97,9 +97,8 @@ export default function App() {
       </div>
 
       <div className="fab-wrap">
-        <span className="fab-tooltip">Chat with Aura</span>
         <button className="fab" onClick={() => setOpened(!opened)}>
-          {opened ? "✖️" : "🤖"}
+          Ask anything...
         </button>
       </div>
 

@@ -213,58 +213,54 @@ body {
 
 .fab-wrap {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 50;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
 }
 
 .fab {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  border: var(--border-w) solid var(--text);
+  width: 100%;
+  max-width: 500px;
+  height: 52px;
+  border-radius: 26px;
+  border: var(--border-w) solid var(--primary);
   cursor: pointer;
-  background: var(--primary);
-  box-shadow: var(--shadow-sm);
-  color: var(--black);
+  background: var(--panel-2);
+  box-shadow: 0 4px 12px rgba(0, 187, 255, 0.2);
+  color: var(--text);
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  transition: transform 0.15s, box-shadow 0.15s;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 16px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  pointer-events: auto;
+  font-weight: 500;
 }
 
 .fab:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--text);
+  box-shadow: 0 6px 16px rgba(0, 187, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .fab:active {
-  transform: translate(2px, 2px);
-  box-shadow: none;
+  transform: translateY(0);
+}
+
+.fab::before {
+  content: "🤖";
+  font-size: 20px;
 }
 
 .fab-tooltip {
-  position: absolute;
-  right: 66px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--panel);
-  border: var(--border-w) solid var(--primary);
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 10px;
-  white-space: nowrap;
-  box-shadow: var(--shadow-sm);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
-
-.fab-wrap:hover .fab-tooltip {
-  opacity: 1;
+  display: none;
 }
 
 .chat-backdrop {
@@ -1071,12 +1067,20 @@ html[data-theme="light"] .chat-panel {
   }
 
   .fab-wrap {
-    right: 16px;
-    bottom: 16px;
+    padding: 12px;
+    bottom: 0;
+  }
+
+  .fab {
+    max-width: 100%;
+    font-size: 14px;
+    height: 48px;
+    padding: 0 14px;
+    font-weight: 500;
   }
 
   .showcase {
-    padding: 0 16px 12px;
+    padding: 0 16px 80px;
   }
 
   .show-card {
@@ -1125,6 +1129,25 @@ html[data-theme="light"] .chat-panel {
 }
 
 @media(max-width:360px) {
+  .fab-wrap {
+    padding: 10px;
+  }
+
+  .fab {
+    max-width: 100%;
+    font-size: 13px;
+    height: 44px;
+    padding: 0 12px;
+  }
+
+  .fab::before {
+    font-size: 16px;
+  }
+
+  .showcase {
+    padding: 0 12px 70px;
+  }
+
   .chat-input {
     padding: 8px 8px 6px 8px;
     gap: 4px;
